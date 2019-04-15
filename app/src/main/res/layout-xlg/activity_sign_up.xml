@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nestedScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/sign_up_ui"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    android:paddingBottom="0dp"
+    tools:context=".activities.SignUpActivity">
+
+    <!-- Linear Layout for the UI elements -->
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_marginTop="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal|center_vertical"
+        android:orientation="vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circularImageView"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="centerCrop"
+            android:src="@drawable/app_logo"/>
+
+        <!-- <TextView
+           android:layout_marginTop="20dp"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center_horizontal"
+           android:text="@string/text_upload_pic"
+           android:textColor="@color/colorWhite"
+           android:textSize="20sp"
+           android:gravity="center_horizontal"
+           android:padding="0dp"
+           app:fontFamily="@font/nunito_semibold"/>
+
+       <TextView
+           android:layout_width="120dp"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center_horizontal"
+           android:text="@string/text_picture"
+           android:textColor="@color/colorWhite"
+           android:textSize="18sp"
+           android:gravity="center_horizontal"
+           android:padding="0dp"
+           app:fontFamily="@font/nunito_semibold"/>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/circularImageView"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:scaleType="centerCrop"
+                android:src="@drawable/profile_icon"
+                app:civ_border_width="2dp"
+                app:civ_border_color="@color/white_ghost">
+            </de.hdodenhof.circleimageview.CircleImageView> -->
+
+            <!--Progress Bar-->
+            <!-- <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="5dp"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:visibility="gone"/>
+
+        </RelativeLayout> -->
+
+        <!-- TextInputLayout and AppCompatEdiText for Email -->
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/email_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="0dp"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:textColorHint="@color/colorWhite"
+            android:layout_marginStart="0dp">
+            <EditText
+                android:id="@+id/editTextEmail"
+                android:layout_width="500dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="0dp"
+                android:drawableLeft="@drawable/ic_email"
+                android:drawablePadding="@dimen/spacing_normal"
+                android:hint="@string/hint_email"
+                android:textColor="@color/colorWhite"
+                app:fontFamily="@font/nunito_semibold"
+                android:textColorHint="@color/colorWhite"
+                android:textSize="18sp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:inputType="textEmailAddress|textAutoComplete|textAutoCorrect"
+                android:maxLines="1"
+                android:drawableStart="@drawable/ic_email"
+                tools:targetApi="o"
+                android:layout_marginStart="0dp"
+                android:importantForAutofill="no" />
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- TextInputLayout and AppCompatEdiText for Username -->
+        <android.support.design.widget.TextInputLayout
+            android:layout_below="@+id/circularImageView"
+            android:id="@+id/username_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:textColorHint="@color/colorWhite"
+            android:layout_marginStart="0dp">
+            <EditText
+                android:id="@+id/editTextUsername"
+                android:layout_width="500dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:drawableLeft="@drawable/ic_person_white"
+                android:drawablePadding="@dimen/spacing_normal"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorWhite"
+                app:fontFamily="@font/nunito_semibold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textSize="18sp"
+                android:hint="@string/hint_username"
+                android:inputType="text|textAutoComplete|textAutoCorrect"
+                android:maxLines="1"
+                android:drawableStart="@drawable/ic_person_white"
+                tools:targetApi="o"
+                android:importantForAutofill="no" />
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- TextInputLayout and AppCompatEdiText for Password -->
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/password_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="0dp"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:textColorHint="@color/colorWhite"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/colorWhite"
+            android:layout_marginStart="0dp">
+            <EditText
+                android:id="@+id/editTextPassword"
+                android:layout_width="500dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="0dp"
+                android:drawableLeft="@drawable/ic_lock_white"
+                android:drawablePadding="@dimen/spacing_normal"
+                android:hint="@string/hint_password"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorWhite"
+                app:fontFamily="@font/nunito_semibold"
+                android:textSize="18sp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:layout_marginStart="0dp"
+                android:drawableStart="@drawable/ic_lock_white"
+                tools:targetApi="o"
+                android:importantForAutofill="no" />
+        </android.support.design.widget.TextInputLayout>
+
+        <!--TextInputLayout and LinearLayout and spinner View for Voter's Gender-->
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/textInputLayoutGender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="0dp"
+            android:orientation="horizontal"
+            android:layout_marginStart="0dp">
+            <LinearLayout
+                android:layout_width="500dp"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:layout_height="match_parent"
+                android:weightSum="1">
+                <!--TextView View  and Spinner View for Voter's Gender-->
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/textViewGender"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:text="@string/text_gender"
+                    android:textSize="18sp"
+                    android:gravity="center_vertical"
+                    app:fontFamily="@font/nunito_semibold"
+                    android:drawableLeft="@drawable/ic_people_black_24dp"
+                    android:drawablePadding="@dimen/spacing_normal"
+                    android:textColor="@color/colorWhite"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_weight="1.11"
+                    android:drawableStart="@drawable/ic_people_black_24dp"
+                    android:layout_marginStart="1dp" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_height="40dp"
+                    android:weightSum="1"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="20dp">
+                    <android.support.v7.widget.AppCompatSpinner
+                        android:id="@+id/spinnerGender"
+                        android:layout_width="150dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="58dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginStart="58dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- TextInputLayout and AppCompatEdiText for Tel. Number -->
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/phoneNumber_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="0dp"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:textColorHint="@color/colorWhite"
+            android:layout_marginStart="0dp">
+            <EditText
+                android:id="@+id/editTextPhoneNumber"
+                android:layout_width="500dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="0dp"
+                android:hint="@string/hint_phone"
+                android:drawableLeft="@drawable/ic_phone"
+                android:drawablePadding="@dimen/spacing_normal"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorWhite"
+                app:fontFamily="@font/nunito_semibold"
+                android:textSize="18sp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:inputType="phone"
+                android:maxLength="15"
+                android:maxLines="1"
+                android:drawableStart="@drawable/ic_phone"
+                android:layout_marginStart="0dp"
+                tools:targetApi="o"
+                android:importantForAutofill="no" />
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- Sign Up Button -->
+        <Button
+            android:id="@+id/buttonSignUp"
+            android:layout_marginTop="20dp"
+            android:layout_width="500dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:text="@string/signUp"
+            android:textColor="@color/orange_deep"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:textStyle="normal"
+            android:textAlignment="center"
+            app:fontFamily="@font/nunito_semibold"
+            android:background="@drawable/round_corner_button_sign_up"
+            android:onClick="onSignUpButtonClick"/>
+
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone"/>
+
+        <!-- Link to the Login Page -->
+        <Button
+            android:id="@+id/buttonLoginLink"
+            android:layout_marginTop="20dp"
+            android:layout_width="500dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/login_link"
+            android:textColor="@color/colorWhite"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:textStyle="normal"
+            app:fontFamily="@font/nunito_semibold"
+            android:textAlignment="center"
+            android:background="@null"
+            android:onClick="onLoginLinkButtonClick"/>
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+</android.support.v4.widget.NestedScrollView>

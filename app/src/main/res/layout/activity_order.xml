@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".activities.OrderActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:alpha="0.99"
+        android:background="@color/colorWhite">
+
+        <!-- Welcome title -->
+        <TextView
+            android:id="@+id/welcome_msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:layout_margin="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:fontFamily="@font/nunito_extrabold"
+            android:padding="5dp"
+            android:textColor="@color/orange_light"/>
+
+        <!-- theme text -->
+        <TextView
+            android:id="@+id/welcome_msg_sub_text"
+            android:layout_below="@+id/welcome_msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome_mgs_sub_desc"
+            android:layout_margin="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            android:textSize="14sp"
+            android:textStyle="italic"
+            app:fontFamily="@font/nunito_extrabold"
+            android:padding="5dp"
+            android:textColor="@color/orange_light"/>
+
+        <!-- order Now text -->
+        <TextView
+            android:layout_below="@+id/welcome_msg_sub_text"
+            android:id="@+id/text_instruction"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:text="@string/order_now"
+            android:layout_marginTop="5dp"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:fontFamily="@font/nunito_semibold"
+            android:padding="5dp"
+            android:textColor="@color/status_bar_back"/>
+
+        <!-- content imageView text -->
+        <ImageView
+            android:id="@+id/home_image"
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_height="260dp"
+            android:alpha="0.5"
+            android:scaleType="fitCenter"
+            android:src="@drawable/splash_bg"
+            android:contentDescription="@string/todo"/>
+
+        <LinearLayout
+            android:id="@+id/layout_ads"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true">
+            <!-- AdView to display ads-->
+            <com.google.android.gms.ads.AdView
+                xmlns:ads="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/adView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="50dp"
+                android:layout_gravity="center"
+                ads:adSize="BANNER"
+                ads:adUnitId="@string/admob_banner_id"/>
+            <com.google.android.gms.ads.AdView
+                xmlns:ads="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/adView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                ads:adSize="BANNER"
+                ads:adUnitId="@string/admob_banner_id"/>
+        </LinearLayout>
+
+        <!--TextInputLayout and LinearLayout
+        and spinner View for contraceptive type-->
+        <android.support.design.widget.TextInputLayout
+            android:layout_below="@+id/home_image"
+            android:id="@+id/textInputLayoutGender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="150dp"
+            android:layout_marginLeft="0dp"
+            android:orientation="horizontal"
+            android:layout_marginStart="0dp">
+            <LinearLayout
+                android:layout_width="280dp"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:weightSum="1">
+                <!--TextView View  and Spinner View for Voter's Gender-->
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/textViewGender"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:text="@string/gender"
+                    android:textSize="19sp"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center_horizontal"
+                    android:drawableLeft="@drawable/ic_gender"
+                    android:drawablePadding="@dimen/padding_normal"
+                    android:textColor="@color/status_bar_back"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_weight="1.11"
+                    android:drawableStart="@drawable/ic_gender"
+                    android:layout_marginStart="1dp" />
+                <LinearLayout
+                    android:layout_width="170dp"
+                    android:orientation="horizontal"
+                    android:layout_height="45dp"
+                    android:weightSum="1"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginStart="0dp">
+                    <android.support.v7.widget.AppCompatSpinner
+                        android:id="@+id/spinnerGender"
+                        android:layout_width="150dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="16dp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- Login Image View used as a Button -->
+        <ImageView
+            android:id="@+id/proceed_Image"
+            android:layout_below="@+id/textInputLayoutGender"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_margin="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/circular_button"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_send"
+            android:onClick="onProceedButtonClick"
+            android:contentDescription="@string/todo"/>
+
+    </RelativeLayout>
+
+</ScrollView>

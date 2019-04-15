@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".fragments.UserSignUpFragment">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/username_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                android:textColorHint="@color/orange_light">
+                <EditText
+                    android:id="@+id/editTextUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_person_orange"
+                    android:drawableLeft="@drawable/ic_person_orange"
+                    android:drawablePadding="@dimen/padding_normal"
+                    android:textColor="@color/orange_light"
+                    android:hint="@string/hint_username"
+                    android:textColorHint="@color/orange_light"
+                    android:fontFamily="@font/lato"
+                    android:textSize="16sp"
+                    android:inputType="text"
+                    android:importantForAutofill="no"
+                    tools:targetApi="o" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/email_container"
+                android:layout_below="@+id/username_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                android:textColorHint="@color/orange_light">
+                <EditText
+                    android:id="@+id/editTextEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_email_orange"
+                    android:drawableLeft="@drawable/ic_email_orange"
+                    android:drawablePadding="@dimen/padding_normal"
+                    android:textColor="@color/orange_light"
+                    android:hint="@string/hint_email"
+                    android:textColorHint="@color/orange_light"
+                    android:fontFamily="@font/lato"
+                    android:textSize="16sp"
+                    android:inputType="textEmailAddress|textAutoComplete|textAutoCorrect"
+                    android:importantForAutofill="no"
+                    tools:targetApi="o" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_below="@+id/email_container"
+                android:id="@+id/password_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                android:textColorHint="@color/orange_light"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/orange_light">
+                <EditText
+                    android:id="@+id/editTextPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_lock_orange"
+                    android:drawableLeft="@drawable/ic_lock_orange"
+                    android:drawablePadding="@dimen/padding_normal"
+                    android:textColor="@color/orange_light"
+                    android:hint="@string/hint_password"
+                    android:textColorHint="@color/orange_light"
+                    android:fontFamily="@font/lato"
+                    android:textSize="16sp"
+                    android:inputType="textPassword"
+                    android:importantForAutofill="no"
+                    tools:targetApi="o" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_below="@+id/password_container"
+                android:id="@+id/phone_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                android:textColorHint="@color/orange_light"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/orange_light">
+                <EditText
+                    android:id="@+id/editTextPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_phone_orange"
+                    android:drawableLeft="@drawable/ic_phone_orange"
+                    android:drawablePadding="@dimen/padding_normal"
+                    android:textColor="@color/orange_light"
+                    android:hint="@string/hint_phone"
+                    android:textColorHint="@color/orange_light"
+                    android:fontFamily="@font/lato"
+                    android:textSize="16sp"
+                    android:inputType="phone"
+                    android:importantForAutofill="no"
+                    tools:targetApi="o" />
+            </android.support.design.widget.TextInputLayout>
+
+            <!--TextInputLayout and LinearLayout and spinner View for user's Gender-->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/textInputLayoutGender"
+                android:layout_below="@+id/phone_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="0dp"
+                android:orientation="horizontal"
+                android:layout_marginStart="0dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:layout_height="match_parent"
+                    android:weightSum="1">
+                    <!--TextView View  and Spinner View for Voter's Gender-->
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/textViewGender"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:text="@string/text_gender"
+                        android:textSize="16sp"
+                        android:gravity="center_vertical"
+                        app:fontFamily="@font/nunito_semibold"
+                        android:drawableLeft="@drawable/ic_people_orange"
+                        android:drawableStart="@drawable/ic_people_orange"
+                        android:drawablePadding="@dimen/spacing_normal"
+                        android:textColor="@color/orange_light"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="1dp" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_height="40dp"
+                        android:weightSum="1"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp">
+                        <android.support.v7.widget.AppCompatSpinner
+                            android:id="@+id/spinnerGender"
+                            android:layout_width="100dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="58dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginStart="58dp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </android.support.design.widget.TextInputLayout>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_below="@+id/phone_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="5dp"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/sign_up_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textInputLayoutGender"
+                android:layout_marginTop="40dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginBottom="40dp"
+                android:text="@string/text_sign_up"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp"
+                android:fontFamily="@font/lato"
+                android:textAllCaps="false"
+                android:background="@drawable/round_corner_button_login"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

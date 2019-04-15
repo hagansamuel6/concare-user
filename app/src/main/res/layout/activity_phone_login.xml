@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.PhoneLoginActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@mipmap/login_bg"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/app_logo"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="20dp"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/app_logo"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/relativeLayout"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:text="@string/text_input_phone_number"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
+            android:textColor="@color/orange_light" />
+
+        <!-- TextInputLayout and AppCompatEdiText for Tel. Number -->
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/mobile_container"
+            android:layout_below="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:textColorHint="@color/colorWhite">
+            <EditText
+                android:id="@+id/editTextMobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView"
+                android:layout_marginTop="20dp"
+                android:digits="0123456789"
+                android:drawableLeft="@drawable/ic_phone_orange"
+                android:drawableStart="@drawable/ic_phone_orange"
+                android:drawablePadding="10dp"
+                android:hint="@string/text_enter_phone"
+                android:textColor="@color/status_bar_back"
+                android:inputType="phone"
+                android:maxLength="10"
+                tools:targetApi="o"
+                android:importantForAutofill="no" />
+            </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/buttonContinue"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mobile_container"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:focusable="true"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:text="@string/text_continue"
+            android:textAllCaps="false"
+            android:textColor="@color/white_dim"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            android:textAlignment="center"
+            app:fontFamily="@font/nunito_semibold"
+            android:background="@drawable/round_corner_button_login"
+            android:onClick="onContinueButtonClick"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
